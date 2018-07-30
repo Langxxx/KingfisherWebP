@@ -7,7 +7,7 @@
 //
 
 import Kingfisher
-import KingfisherWebP.Private
+//import KingfisherWebP.Private
 
 // MARK: - Image Representation
 extension Kingfisher where Base: Image {
