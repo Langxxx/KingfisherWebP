@@ -19,24 +19,26 @@ KingfisherWebP is an extension of the popular library [Kingfisher](https://githu
 #s.osx.deployment_target = "10.10" # Not supported for now
   s.watchos.deployment_target = "2.0"
 
-  s.source_files = 'KingfisherWebP/Classes/**/*'
+  s.source_files = 'KingfisherWebP/Classes/**/*', 'KingfisherWebP/libwebp/*.c'
+  s.private_header_files = 'KingfisherWebP/libwebp/*.h'
+  s.preserve_paths = 'KingfisherWebP/KingfisherWebP.modulemap', 'KingfisherWebP/libwebp/*.h'
   # s.public_header_files = 'KingfisherWebP/Classes/KingfisherWebP-umbrella.h'
   # s.private_header_files = 'KingfisherWebP/Classes/CGImage+WebP.h'
   # s.module_map = 'KingfisherWebP/KingfisherWebP.modulemap'
 
-  s.xcconfig = {
-    'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
-  }
-  s.tvos.xcconfig = {
-    'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
-  }
-  s.osx.xcconfig = {
-    'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
-  }
-  s.watchos.xcconfig = {
-    'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) WEBP_USE_INTRINSICS=1',
-    'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
-  }
+  # s.xcconfig = {
+  #   'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
+  # }
+  # s.tvos.xcconfig = {
+  #   'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
+  # }
+  # s.osx.xcconfig = {
+  #   'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
+  # }
+  # s.watchos.xcconfig = {
+  #   'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) WEBP_USE_INTRINSICS=1',
+  #   'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
+  # }
 
   #s.osx.exclude_files = # None
   #s.watchos.exclude_files = # None
@@ -44,6 +46,5 @@ KingfisherWebP is an extension of the popular library [Kingfisher](https://githu
   #s.tvos.exclude_files = # None
 
   s.dependency 'Kingfisher', '~> 4.0'
-  s.dependency 'libwebp', '>= 0.5.0'
   
 end
