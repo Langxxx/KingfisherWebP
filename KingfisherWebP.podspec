@@ -19,8 +19,8 @@ KingfisherWebP is an extension of the popular library [Kingfisher](https://githu
 #s.osx.deployment_target = "10.10" # Not supported for now
   s.watchos.deployment_target = "2.0"
 
-  s.source_files = 'KingfisherWebP/Classes/**/*', 'KingfisherWebP/libwebp/*.c'
-  s.private_header_files = 'KingfisherWebP/libwebp/*.h'
+  s.source_files = 'KingfisherWebP/Classes/**/*', 'KingfisherWebP/libwebp/**/*.c'
+  s.private_header_files = 'KingfisherWebP/libwebp/**/*.h'
   s.preserve_paths = 'KingfisherWebP/KingfisherWebP.modulemap', 'KingfisherWebP/libwebp/*.h'
   # s.public_header_files = 'KingfisherWebP/Classes/KingfisherWebP-umbrella.h'
   # s.private_header_files = 'KingfisherWebP/Classes/CGImage+WebP.h'
